@@ -1,0 +1,1 @@
+<?php  header('Location: http://192.168.0.43:8005/sprinkler/status.php');?>
