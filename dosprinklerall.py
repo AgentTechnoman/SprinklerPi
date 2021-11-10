@@ -46,14 +46,14 @@ try:
   GPIO.output(24, GPIO.HIGH)
   time.sleep(1);
   
-  GPIO.output(23, GPIO.LOW)
-  CurrentTime = strftime("%-m/%-d/%y - %-I:%M %^P", localtime())
-  f = open('history.php', 'a')
-  f.write('<tr><td>'+CurrentTime+'</td><td>Front Planters - ALL</td><td>'+str(SprinklerTimerMin)+"</tr>\n")
-  f.close()
-  time.sleep(SprinklerTimer);
-  GPIO.output(23, GPIO.HIGH)
-  time.sleep(1);
+#  GPIO.output(23, GPIO.LOW)
+#  CurrentTime = strftime("%-m/%-d/%y - %-I:%M %^P", localtime())
+#  f = open('history.php', 'a')
+#  f.write('<tr><td>'+CurrentTime+'</td><td>Front Planters - ALL</td><td>'+str(SprinklerTimerMin)+"</tr>\n")
+#  f.close()
+#  time.sleep(SprinklerTimer);
+#  GPIO.output(23, GPIO.HIGH)
+#  time.sleep(1);
   
 # All done; shut 'er down.
   GPIO.cleanup()

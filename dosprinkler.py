@@ -5,8 +5,6 @@ import sys
 import shutil
 from time import localtime, strftime
 
-
-
 #Grab Variable from Command Line and Assign it
 SprinklerZone = int(sys.argv[1])
 SprinklerTimer = int(sys.argv[2])*60

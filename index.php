@@ -62,9 +62,9 @@ if ($_POST["AllZones"] == 1) {
   <script src="scripts/jquery.min.js"></script>
   <title>Sprinkler Controller</title>
   <link rel="stylesheet" type="text/css" href="css/sprinklertable.css">
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/normalize1.css">
-  <link rel="stylesheet" href="css/skeleton1.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway:400,300,600">
+  <link rel="stylesheet" type="text/css" href="css/normalize1.css">
+  <link rel="stylesheet" type="text/css" href="css/skeleton1.css">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- USED FOR FADING OUT NEW SUBMISSIONS USING JQUERY -->
@@ -86,10 +86,13 @@ if ($_POST["AllZones"] == 1) {
  
   <div class="container">
    <div class="row">
-    <div class="one-half column" style="margin-top: 5%">
+    <div class="two column" style="margin-top: 5%;">
      <center>
-      <table width:350px;><tr><td> <h2>SprinklerPi</h2></td><td><img style='margin: 0px 0px 30px 0px;' src=./images/grass.png height=47px></td><td width=200px></td></tr></table>
-      <div id="status"><?php include "status.php";?></div>
+      <span style="font-size:2.5em;font-weight:300;">
+		SprinklerPi
+	  </span>
+	  <a href="admin.php"><img src=./images/grass.png height=40px></a><br>
+	  <div id="status"><?php include "status.php";?></div>
        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <input type=submit value="RV Parking" class="button button-primary"></input>
         <select name=RVParkingTime><?php for($x=1; $x<=20; $x++){echo "<option name='timer'value='$x'>$x</option>";}?></select>
